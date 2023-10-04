@@ -27,5 +27,7 @@ class Pessoa {
     return _altura;
   }
 
-
+  Pessoa(String nome) {
+    _nome = nome;
+  }
 }
