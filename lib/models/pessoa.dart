@@ -30,4 +30,21 @@ class Pessoa {
   Pessoa(String nome) {
     _nome = nome;
   }
+
+  String retornaIMC(double peso, double altura) {
+    var imc = peso / (altura * altura);
+    return imc.toStringAsFixed(2);
+  }
+
+  String? resultadoIMC(double imc) {
+    if (imc < 18.5) {
+      return "Você está abaixo do peso. Seu IMC é: $imc";
+    } else if (imc > 18.5 && imc <= 24.99) {
+      return "O seu peso está normal. Seu IMC é: $imc";
+    } else if (imc > 25 && imc <= 29.99) {
+      return "Você está com sobrepeso. Seu IMC é: $imc";
+    } else {
+      return "Você está com obesidade. Tome cuidado, seu IMC é: $imc";
+    }
+  }
 }

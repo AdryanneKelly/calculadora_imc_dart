@@ -24,4 +24,6 @@ class Functions {
     print(texto);
     return lerDouble();
   }
+
+  
 }
